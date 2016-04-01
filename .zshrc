@@ -53,7 +53,7 @@ plugins=(git python)
 
 # User configuration
 
-  export PATH="/home/carl/altera/14.0/modelsim_ae/bin:/home/carl/altera/14.0/quartus/bin:/home/carl/Downloads/mxe/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
