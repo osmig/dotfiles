@@ -16,9 +16,17 @@ function remove_old_link_if_exists {
     fi
 }
 
+
+#All files that should be copied:
+files=($HOME/dotfiles/.*rc)
+files+=("$HOME/dotfiles/.gitconfig")
+
+
+
+#Start main script
 SUCCESS=0
-echo "~/dotfiles/.*rc is:" ~/dotfiles/.*rc
-for file in  $HOME/dotfiles/.*rc; do
+echo "files==${files[@]}"
+for file in ${files[@]}; do
     echo ""
     basefile=$(basename $file)
     echo "Creating symlink for $basefile"
