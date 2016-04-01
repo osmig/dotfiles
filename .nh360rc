@@ -1,0 +1,107 @@
+#NOTE: Thanks to various people at alt.nethack.org I "burrowed" ideas/good config file options from.
+
+
+DOGNAME=Fidovich
+CATNAME=evilbeast
+
+#Make ghosts tiles visible.
+SYMBOLS=S_ghost:8
+
+OPTIONS=showexp,showscore,time,color,!autopickup,pickup_burden:unencumbered
+OPTIONS=!implicit_uncursed,menu_objsyms
+
+#Vim-style controls.
+OPTIONS=number_pad:0
+
+#Turn on bone files if already not allowed.
+OPTIONS=bones
+
+OPTIONS=lit_corridor
+OPTIONS=hilite_pet
+
+#Status color for 3.6
+OPTIONS=statushilites
+OPTION=hilite_status: hitpoints/80%/yellow/normal
+OPTION=hilite_status: hitpoints/30%/red/yellow
+OPTION=hilite_status: power/80%/yellow/normal
+OPTION=hilite_status: power/30%/red/yellow
+OPTION=hilite_status: strength/updown/red/green
+OPTION=hilite_status: intelligence/updown/red/green
+OPTION=hilite_status: wisdom/updown/red/green
+OPTION=hilite_status: dexterity/updown/red/green
+OPTION=hilite_status: constitution/updown/red/green
+OPTION=hilite_status: charisma/updown/red/green
+OPTION=hilite_status: hunger/50%/magenta/magenta
+
+# How recalled messages (ctrl-p) are displayed.
+OPTIONS=msg_window:reversed
+
+# Important, but not directly life-threatening messages. Credits to Picklejuice, via hothraxxa
+MSGTYPE=stop "You see here a cockatrice corpse."
+MSGTYPE=stop "You see here a chickatrice corpse."
+MSGTYPE=stop "You are beginning to feel weak."
+MSGTYPE=stop "You fail to cast the spell correctly."
+MSGTYPE=stop "Your wielded * rots away."
+MSGTYPE=stop "You find a*"
+
+# Messages it's easy to miss. Credits to hothraxxa
+MSGTYPE=stop "You feel more confident in your*skills."
+MSGTYPE=stop "You feel a strange vibration*"
+
+##### Delayed instadeaths. Always prompt for -more-
+# Credits to stth, obtained via TjrWiz (username tjr2) via scorchasc via hothraxxa
+      ## delayed instadeaths. always prompt for -more-
+MSGTYPE=stop "You are slowing down."
+MSGTYPE=stop "You find it hard to breathe."
+MSGTYPE=stop "You are turning a little .*"
+
+MSGTYPE=stop "You descend the stairs."
+MSGTYPE=stop "You climb up the stairs."
+
+MSGTYPE=stop "The couatl swings itself around you!"
+MSGTYPE=stop "The electric eel swings itself around you!"
+MSGTYPE=stop "The giant eel swings itself around you!"
+MSGTYPE=stop "The kraken swings itself around you!"
+MSGTYPE=stop "The python grabs you!"
+MSGTYPE=stop "You don't feel very well."
+MSGTYPE=stop "You are turning a little green."
+MSGTYPE=stop "Your limbs are getting oozy."
+MSGTYPE=stop "Your skin begins to peel away."
+MSGTYPE=stop "You are turning into a green slime."
+MSGTYPE=stop "You are slowing down."
+MSGTYPE=stop "Your limbs are stiffening."
+MSGTYPE=stop "It constricts your throat!"
+MSGTYPE=stop "You find it hard to breathe."
+MSGTYPE=stop "You're gasping for air."
+MSGTYPE=stop "Your blood is having trouble reaching your brain."
+MSGTYPE=stop "You can no longer breathe."
+MSGTYPE=stop "You're turning blue."
+MSGTYPE=stop "Your consciousness is fading."
+MSGTYPE=stop "You feel deathly sick."
+MSGTYPE=stop "You feel much worse."
+MSGTYPE=stop "You feel even worse."
+
+
+## Colored menus. Regular expressions allowed.
+OPTIONS=menucolors
+MENUCOLOR=" blessed "=green
+MENUCOLOR=" holy "=green
+MENUCOLOR=" cursed "=red
+MENUCOLOR=" unholy "=red
+MENUCOLOR=" cursed .* (being worn)"=orange&underline
+
+
+## Messagetypes
+#
+## displacing pets. hide the message.
+#MSGTYPE=hide "You swap places with your .*"
+## items on floor. don't repeat the message.
+#MSGTYPE=norep "You see here a .*"
+#MSGTYPE=norep "You see here an .*"
+## delayed instadeaths. always prompt for -more-
+#MSGTYPE=stop "You are slowing down."
+#MSGTYPE=stop "You find it hard to breathe."
+#MSGTYPE=stop "You are turning a little .*"
+## moving up or down stairs
+#MSGTYPE=hide "You descend .*"
+#MSGTYPE=hide "You (climb|fly) (up|down) .*"
