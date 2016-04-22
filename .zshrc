@@ -49,7 +49,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git python)
+plugins=(git python docker)
 
 # User configuration
 
@@ -86,3 +86,5 @@ export EDITOR=vim
 alias filesizes='du -h --max-depth=1 ./* | sort -h'
 alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
 alias py='python'
+alias docker_stopandremove='docker stop $(docker ps -a -q); docker rm $(docker ps -a -q)'
+alias docker_flush='docker rmi $(docker images -q -f dangling=true)'
