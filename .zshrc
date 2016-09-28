@@ -53,7 +53,6 @@ plugins=(git python docker)
 
 # User configuration
 
-  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -88,3 +87,4 @@ alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 
 alias py='python'
 alias docker_stopandremove='docker stop $(docker ps -a -q); docker rm $(docker ps -a -q)'
 alias docker_flush='docker rmi $(docker images -q -f dangling=true)'
+alias git-root='cd "$(git rev-parse --show-toplevel)"'
